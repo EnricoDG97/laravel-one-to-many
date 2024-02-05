@@ -15,6 +15,10 @@
         @else
             <p>Nessuna copertina disponibile.</p>
         @endif
+        
+        <div>
+            Tipologia: {{ $project->type ? $project->type->name : 'Nessuna tipologia assegnata' }}
+        </div>
 
         <p class="mt-4">
             {{ $project->description }}

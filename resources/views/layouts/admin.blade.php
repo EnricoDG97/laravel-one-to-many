@@ -75,6 +75,12 @@
                                     <i class="fa-solid fa-file-zipper"></i> Archiviati
                                 </a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white {{ Route::currentRouteName() == 'admin.types.index' ? 'bg-secondary' : '' }}"
+                                    href="{{ route('admin.types.index') }}">
+                                    <i class="fa-solid fa-tags fa-lg fa-fw"></i> Tipologie
+                                </a>
+                            </li>
                         </ul>
                     </div>
                 </nav>

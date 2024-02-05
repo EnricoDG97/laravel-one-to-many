@@ -26,6 +26,19 @@
                 @enderror
             </div>
 
+            <div class="mb-3 has-validation">
+                <label for="type">Seleziona tipologia</label>
+                <select class="form-select @error('type_id') is-invalid @enderror" name="type_id" id="type">
+                    <option @selected(!old('type_id')) value="">Nessuna tipologia</option>
+                    @foreach ($types as $type)
+                        <option @selected(old('type_id') == $type->id) value="{{ $type->id }}">{{ $type->name }}</option>
+                    @endforeach
+                </select>   
+                @error('type_id')
+                    <div class="invalid-feedback">{{ $message }}</div>
+                @enderror
+            </div>
+
             <div class="mb-2">
                 <label for="description" class="form-label">Descrizione del progetto:</label>
                 <textarea class="form-control" id="description" rows="5" name="description">{{ old('description') }}</textarea>
