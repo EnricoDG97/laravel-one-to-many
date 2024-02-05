@@ -16,7 +16,7 @@
         </div>
     @endif
 
-        <form action="{{ route('admin.projects.update', ['project' => $project->slug]) }}" method="project" enctype="multipart/form-data">
+        <form action="{{ route('admin.projects.update', ['project' => $project->slug]) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             
